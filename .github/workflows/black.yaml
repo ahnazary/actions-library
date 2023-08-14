@@ -1,5 +1,5 @@
-name: Pylint
-run-name: Pylint
+name: Black
+run-name: Black
 
 on:
   push:
