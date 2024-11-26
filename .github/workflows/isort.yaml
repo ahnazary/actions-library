@@ -1,28 +1,26 @@
 name: Pylint
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  workflow_call:
 
+    
 jobs:
   format:
-    name: Format Check
+    name: Isoort Linter
     runs-on: ubuntu-latest
     steps:
       - name: Check out source repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: 3.11
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install isort 
+          pip install isort==5.13.2
 
       - name: Run isort
         run: |
