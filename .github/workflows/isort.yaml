@@ -1,12 +1,12 @@
-name: Pylint
+name: isort-linter
 
 on:
   workflow_call:
 
-    
+
 jobs:
   format:
-    name: Isoort Linter
+    name: Isort Linter
     runs-on: ubuntu-latest
     steps:
       - name: Check out source repository

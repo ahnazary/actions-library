@@ -1,10 +1,7 @@
-# Workflow to check code formatting with Black, will be imported to other workflows
-
 name: black-linter
 
 on:
   workflow_call:
-
 
 jobs:
   black-linter:
